@@ -1,3 +1,5 @@
+package org.credman0.tcgplayer.purchaser;
+
 import java.io.File;
 import java.util.ArrayList;
 

@@ -1,3 +1,5 @@
+package org.credman0.tcgplayer.purchaser;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -109,8 +111,8 @@ public class TCGPlayerInteractor {
             boolean foundOne = false;
             for (WebElement listElement:setDropDown.findElements(By.tagName("label"))) {
                 String labelText = listElement.getText().trim().toLowerCase();
-                if (!labelText.contains(set.toLowerCase())) {
-                    listElement.click();
+                if (!labelText.equals(set.toLowerCase())) {
+                    listElement.findElement(By.xpath("./..")).click();
                 } else {
                     foundOne = true;
                 }
