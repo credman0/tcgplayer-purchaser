@@ -112,7 +112,7 @@ public class TCGPlayerInteractor {
             for (WebElement listElement:setDropDown.findElements(By.tagName("label"))) {
                 String labelText = listElement.getText().trim().toLowerCase();
                 if (!labelText.equals(set.toLowerCase())) {
-                    listElement.findElement(By.xpath("./..")).click();
+                    listElement.findElement(By.xpath("./..")).findElement(By.tagName("input")).click();
                 } else {
                     foundOne = true;
                 }
